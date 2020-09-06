@@ -2478,6 +2478,10 @@ goodfruit:
 			    rejectoption(boolopt[i].name);
 			    return;
 			}
+			 if (iflags.debug_fuzzer && !initial) {
+                		if (boolopt[i].addr == &flags.silent)
+                    			return;
+       			  }
 
 			*(boolopt[i].addr) = !negated;
 
